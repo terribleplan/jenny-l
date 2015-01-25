@@ -1,0 +1,18 @@
+{
+  "types": [
+    {
+      "display": "ISC license",
+      "directory": "isc"
+    }
+  ],
+  "formats": [
+    {
+      "display": "Markdown",
+      "extension": "md"
+    },
+    {
+      "display": "Plain text",
+      "extension": "txt"
+    }
+  ]
+}

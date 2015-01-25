@@ -1,0 +1,45 @@
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.2.0/knockout-min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+</head>
+<body>
+<div class="container">
+    <form action="" id="control">
+        <div class="row">
+            <div class="form-group col-sm-6">
+                <label for="control-types">License</label>
+                <select name="control-types" id="control-types" class="form-control" data-bind="options: types, optionsText: 'display', value: type"></select>
+            </div>
+            <div class="form-group col-sm-6">
+                <label for="control-formats">Output format</label>
+                <select name="control-formats" id="control-formats" class="form-control" data-bind="options: formats, optionsText: 'display', value: format"></select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-sm-6">
+                <label for="control-name">Name</label>
+                <input name="control-name" id="control-name" class="form-control" type="text" data-bind="value: name"/>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" checked data-bind="checked: orgEqName"> 'Organization Name' is the same as 'Name'
+                    </label>
+                </div>
+            </div>
+            <div class="form-group col-sm-6">
+                <label for="control-org-name">Organization Name</label>
+                <input name="control-org-name" id="control-org-name" class="form-control" type="text" data-bind="value: orgName, disable: orgEqName"/>
+            </div>
+        </div>
+    </form>
+    <section>
+        <div class="row">
+            <pre data-bind="text: output">Output goes here.</pre>
+        </div>
+    </section>
+</div>
+</body>
+</html>
